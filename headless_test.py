@@ -31,7 +31,8 @@ class HeadlessBrowserTest(unittest.TestCase):
         time.sleep(5)
         passwordBox = self.driver.find_element_by_name('password')
         passwordBox.send_keys('minecraft')
-        passwordBox.submit()
+
+        self.driver.find_element_by_tag_name("button").click()
         time.sleep(5)
 
         label = self.driver.find_element_by_tag_name('label')
